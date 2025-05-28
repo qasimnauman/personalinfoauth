@@ -185,8 +185,17 @@ const logoutUser = asyncHandler(
     }
 );
 
+const testroute = asyncHandler(
+    async (req, res) => {
+        return res.status(200).json(
+            new Apiresponse(200, {}, "Test Route is working")
+        )
+    }
+);
+
 export {
     registerUser,
     loginUser,
     logoutUser,
+    testroute
 }
